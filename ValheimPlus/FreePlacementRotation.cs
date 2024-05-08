@@ -9,7 +9,6 @@ using System.Runtime;
 using IniParser;
 using IniParser.Model;
 using System.Globalization;
-using Steamworks;
 using ValheimPlus;
 using UnityEngine.Rendering;
 using ValheimPlus.Configurations;
