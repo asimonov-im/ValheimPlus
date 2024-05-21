@@ -57,5 +57,6 @@ namespace ValheimPlus.Configurations
         public WispSpawnerConfiguration WispSpawner { get; set; }
         public DemisterConfiguration Demister { get; set; }
         public HotTubConfiguration HotTub { get; set; }
+        public OvenConfiguration Oven { get; set; }
     }
 }
