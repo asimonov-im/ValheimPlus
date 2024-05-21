@@ -59,5 +59,6 @@ namespace ValheimPlus.Configurations
         public HotTubConfiguration HotTub { get; set; }
         public OvenConfiguration Oven { get; set; }
         public SapCollectorConfiguration SapCollector { get; set; }
+        public ShieldGeneratorConfiguration ShieldGenerator { get; set; }
     }
 }
