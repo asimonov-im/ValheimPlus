@@ -30,55 +30,14 @@ namespace ValheimPlus.GameClasses
         [HarmonyPatch(typeof(SapCollector), "GetHoverText")]
         public static class SapCollector_GetHoverText_Patch
         {
-            private static bool Prefix(SapCollector __instance, ref string __result)
+            private static void Postfix(SapCollector __instance, ref string __result)
             {
-                if (!Configuration.Current.SapCollector.IsEnabled || !Configuration.Current.SapCollector.showDuration)
-                    return true;
-    
-                if (!PrivateArea.CheckAccess(__instance.transform.position, 0f, false))
-                {
-                    __result = Localization.instance.Localize(__instance.m_name + "\n$piece_noaccess");
-                    return false;
-                }
-                int level = __instance.GetLevel();
-                if (level > 0)
-                {
-                    __result = Localization.instance.Localize(string.Concat(new object[]
-                    {
-                    __instance.m_name,
-                    " ( ",
-                    __instance.m_spawnItem.m_itemData.m_shared.m_name,
-                    " x ",
-                    level,
-                    " ) " + calculateTimeLeft(__instance) + "\n[<color=yellow><b>$KEY_Use</b></color>] $piece___instance_extract"
-                    }));
-                    return false;
-                }
-                __result = Localization.instance.Localize(__instance.m_name + " ( $piece_container_empty ) " + calculateTimeLeft(__instance) + "\n[<color=yellow><b>$KEY_Use</b></color>]");
-                return false;
-    
+                if (!Configuration.Current.SapCollector.IsEnabled || !Configuration.Current.SapCollector.showDuration || __instance.GetLevel() == __instance.m_maxLevel) return;
+                                
+                int duration = (int)(__instance.m_secPerUnit - __instance.m_nview.GetZDO().GetFloat(ZDOVars.s_product));
+                var info = duration >= 120 ? duration / 60 + " minutes" : duration + " seconds";
+                __result = __result.Replace(" )", " )\n(" + info + ")");
             }
-    
-            private static string calculateTimeLeft(SapCollector SapCollectorInstance)
-            {
-                string info = "";
-    
-                if (SapCollectorInstance.GetLevel() == SapCollectorInstance.m_maxLevel)
-                    return info;
-    
-                float num = SapCollectorInstance.m_nview.GetZDO().GetFloat("product");
-    
-                float durationUntilDone = SapCollectorInstance.m_secPerUnit - num;
-                int minutes = (int)durationUntilDone / 60;
-    
-                if (((int)durationUntilDone) >= 120)
-                    info = minutes + " minutes";
-                else
-                    info = (int)durationUntilDone + " seconds";
-    
-                return " (" + info + ")";
-            }
-    
         }
     
         /// <summary>
