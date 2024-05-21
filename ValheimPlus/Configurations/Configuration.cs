@@ -58,5 +58,6 @@ namespace ValheimPlus.Configurations
         public DemisterConfiguration Demister { get; set; }
         public HotTubConfiguration HotTub { get; set; }
         public OvenConfiguration Oven { get; set; }
+        public SapCollectorConfiguration SapCollector { get; set; }
     }
 }
