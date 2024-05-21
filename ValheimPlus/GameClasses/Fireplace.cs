@@ -192,6 +192,7 @@ namespace ValheimPlus.GameClasses
             "piece_walltorch", // sconce torch
             "piece_brazierceiling01", // ceiling brazier
             "piece_brazierfloor01", // standing brazier
+            "piece_brazierfloor02", // Blue standing brazier
             "piece_jackoturnip" // Jack-o-turnip
         };
 
