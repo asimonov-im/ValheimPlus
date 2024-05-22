@@ -88,6 +88,13 @@ namespace ValheimPlus.GameClasses
                 "BlackCore"
             };
 
+            var questItems = new List<string>
+            {
+                "DragonEgg",
+                "WitheredBone",
+                "GoblinTotem"
+            };
+
             _yieldModifierDict = new Dictionary<string, float>();
 
             foreach (var item in edibles)
@@ -102,6 +109,8 @@ namespace ValheimPlus.GameClasses
                 _yieldModifierDict.Add(item, Configuration.Current.Pickable.surtlingCores);
             foreach (var item in blackCores)
                 _yieldModifierDict.Add(item, Configuration.Current.Pickable.blackCores);
+            foreach (var item in questItems)
+                _yieldModifierDict.Add(item, Configuration.Current.Pickable.questItems);
         }
     }
 
