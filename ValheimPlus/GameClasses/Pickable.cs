@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -36,6 +36,8 @@ namespace ValheimPlus.GameClasses
                 "Mushroom",
                 "MushroomBlue",
                 "MushroomYellow",
+                "MushroomMagecap",
+                "MushroomJotunPuffs",
                 "Onion"
             };
 
@@ -48,7 +50,8 @@ namespace ValheimPlus.GameClasses
                 "Thistle",
                 "TurnipSeeds",
                 "Turnip",
-                "OnionSeeds"
+                "OnionSeeds",
+                "RoyalJelly",
             };
 
             var materials = new List<string>
