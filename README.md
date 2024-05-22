@@ -65,12 +65,12 @@ A HarmonyX Mod aimed at improving the gameplay quality of Valheim. The mod inclu
 * Modify the amount of resources dropped on destruction of objects (this includes chitin, stone, all types of wood, feathers, and minerals).
 * Modify the amount of resources gathered from interactable objects.
   * Edibles: Carrot, Blueberries, Cloudberry, Raspberry, Mushroom, Blue Mushroom, Yellow Mushroom, Magecap Mushroom, Jotun Puffs, Smoke Puff, Fiddlehead, Vineberry, Onion
-  * Flowers and Ingredients : Barley, CarrotSeeds, Dandelion, Flax, Thistle, TurnipSeeds, Turnip, OnionSeeds, RoyalJelly, VoltureEgg
-  * Materials : BoneFragments, Flint, Stone, Wood, Crystal, Tar, WolfHairBundle, WolfClaw
-  * Valuables : Ambers, AmberPearls, Coins, Rubys
+  * Flowers and Ingredients : Barley, Carrot Seeds, Dandelion, Flax, Thistle, Turnip Seeds, Turnip, Onion Seeds, Royal Jelly, Volture Egg
+  * Materials : Bone Fragments, Flint, Stone, Wood, Crystal, Tar, Wolf Hair, Wolf Claw
+  * Valuables : Ambers, Amber Pearls, Coins, Rubys
   * Surtling cores on item stands inside dungeons.
   * Black cores on item stands inside dungeons.
-  * Quest items you can pick up.
+  * Quest items you can pick up: Dragon Egg, Withered Bone, Goblin Totem
 * Modify the drop chance of resources from destroyed objects that have a drop chance like muddy scrap piles.
 
 ### Wagon
