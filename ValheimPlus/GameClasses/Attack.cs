@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using UnityEngine;
 using ValheimPlus.Configurations;
 
@@ -55,6 +55,79 @@ namespace ValheimPlus.GameClasses
                             break;
                         case Skills.SkillType.Bows:
                             __result = Helper.applyModifierValue(__result, Configuration.Current.StaminaUsage.bows);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Attack), "GetAttackEitr")]
+    public static class Attack_GetAttackEitr_Patch
+    {
+        private static void Postfix(ref Attack __instance, ref float __result)
+        {
+
+            if (Configuration.Current.EitrUsage.IsEnabled)
+            {
+                if (__instance.m_character.IsPlayer())
+                {
+                    ItemDrop.ItemData item = __instance.m_character.GetCurrentWeapon();
+
+                    Skills.SkillType skillType;
+                    if (item == null)
+                    {
+                        skillType = Skills.SkillType.Unarmed;
+                    }
+                    else
+                    {
+                        skillType = item.m_shared.m_skillType;
+                    }
+
+                    switch (skillType)
+                    {
+                        case Skills.SkillType.BloodMagic:
+                            __result = Helper.applyModifierValue(__result, Configuration.Current.EitrUsage.bloodMagic);
+                            break;
+                        case Skills.SkillType.ElementalMagic:
+                            __result = Helper.applyModifierValue(__result, Configuration.Current.EitrUsage.elementalMagic);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+    }
+
+
+    [HarmonyPatch(typeof(Attack), "GetAttackHealth")]
+    public static class Attack_GetAttackHealth_Patch
+    {
+        private static void Postfix(ref Attack __instance, ref float __result)
+        {
+            if (Configuration.Current.HealthUsage.IsEnabled)
+            {
+                if (__instance.m_character.IsPlayer())
+                {
+                    ItemDrop.ItemData item = __instance.m_character.GetCurrentWeapon();
+
+                    Skills.SkillType skillType;
+                    if (item == null)
+                    {
+                        skillType = Skills.SkillType.Unarmed;
+                    }
+                    else
+                    {
+                        skillType = item.m_shared.m_skillType;
+                    }
+
+                    switch (skillType)
+                    {
+                        case Skills.SkillType.BloodMagic:
+                            __result = Helper.applyModifierValue(__result, Configuration.Current.HealthUsage.bloodMagic);
                             break;
                         default:
                             break;
