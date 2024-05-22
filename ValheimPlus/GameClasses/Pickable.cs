@@ -61,6 +61,7 @@ namespace ValheimPlus.GameClasses
                 "Stone",
                 "Wood",
                 "Crystal",
+                "Tar"
             };
 
             var valuables = new List<string>
