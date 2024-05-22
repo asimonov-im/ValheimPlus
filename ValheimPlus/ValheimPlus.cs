@@ -52,11 +52,11 @@ namespace ValheimPlus
         private static Harmony harmony = new Harmony("mod.valheim_plus");
 
         // Project Repository Info
-        public static string Repository = "https://github.com/Grantapher/ValheimPlus/releases/latest";
-        public static string ApiRepository = "https://api.github.com/repos/grantapher/valheimPlus/releases/latest";
+        public static string Repository = "https://github.com/asimonov-im/ValheimPlus/releases/latest";
+        public static string ApiRepository = "https://api.github.com/repos/asimonov-im/valheimPlus/releases/latest";
 
         // Website INI for auto update
-        public static string iniFile = "https://github.com/Grantapher/ValheimPlus/releases/download/" + fullVersion + "/valheim_plus.cfg";
+        public static string iniFile = "https://github.com/asimonov-im/ValheimPlus/releases/download/" + fullVersion + "/valheim_plus.cfg";
 
         // mod fails to load when this type is correctly specified as VersionCheck, so we'll just cast it as needed instead.
         private static object versionCheck = new VersionCheck("org.bepinex.plugins.valheim_plus")
