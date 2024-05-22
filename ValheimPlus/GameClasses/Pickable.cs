@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -15,6 +15,9 @@ namespace ValheimPlus.GameClasses
 
         public static int CalculateYield(GameObject item, int originalAmount)
         {
+            if (!Configuration.Current.Pickable.IsEnabled)
+                return originalAmount;
+
             if (_yieldModifierDict.TryGetValue(item.name, out float yieldModifier))
             {
                 return (int)Helper.applyModifierValue(originalAmount, yieldModifier);
