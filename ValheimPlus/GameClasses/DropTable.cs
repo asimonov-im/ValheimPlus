@@ -83,7 +83,7 @@ namespace ValheimPlus.GameClasses
                     case "Blackwood": // Ashwood
                         AddModifiedDrops(newResultDrops, toDrop, Configuration.Current.Gathering.blackwood);
                         break;
-                    case "FlametalOreNew": // Ashwood
+                    case "FlametalOreNew": // Flametal
                         AddModifiedDrops(newResultDrops, toDrop, Configuration.Current.Gathering.flametalOre);
                         break;
                     case "ProustitePowder": // ProustitePowder
