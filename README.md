@@ -64,8 +64,8 @@ A HarmonyX Mod aimed at improving the gameplay quality of Valheim. The mod inclu
 ### Gathering
 * Modify the amount of resources dropped on destruction of objects (this includes chitin, stone, all types of wood, feathers, and minerals).
 * Modify the amount of resources gathered from interactable objects.
-  * Edibles: Carrot, Blueberries, Cloudberry, Raspberry, Mushroom, Blue Mushroom, Yellow Mushroom, Magecap Mushroom, Jotun Puffs, Smoke Puff, Fiddlehead, Vineberry, Onion
-  * Flowers and Ingredients : Barley, Carrot Seeds, Dandelion, Flax, Thistle, Turnip Seeds, Turnip, Onion Seeds, Royal Jelly, Volture Egg
+  * Edibles: Carrots, Blueberries, Cloudberrys, Raspberrys, Mushrooms, Blue Mushrooms, Yellow Mushrooms, Magecap Mushrooms, Jotun Puffs, Smoke Puffs, Fiddleheads, Vineberrys, Onions
+  * Flowers and Ingredients : Barley, Carrot Seeds, Dandelions, Flax, Thistle, Turnip Seeds, Turnip, Onion Seeds, Royal Jelly, Volture Eggs
   * Materials : Bone Fragments, Flint, Stone, Wood, Crystal, Tar, Wolf Hair, Wolf Claw
   * Valuables : Ambers, Amber Pearls, Coins, Rubys
   * Surtling cores on item stands inside dungeons.
