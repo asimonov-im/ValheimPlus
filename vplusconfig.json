@@ -1445,6 +1445,48 @@
 			}
 		}
 	},
+	"EitrUsage": {
+		"description": "",
+		"icon": "fa fa-tools",
+		"description_website": "Change the eitr usage of in-game weapons related actions.",
+		"entries": {
+			"enabled": {
+				"description": "Change false to true to enable this section",
+				"defaultValue": "false",
+				"defaultType": "bool"
+			},
+			"bloodMagic": {
+				"description": "Changes the amount of eitr drain by %",
+				"defaultValue": "0",
+				"defaultType": "float",
+				"modifier": "true"
+			},
+			"elementalMagic": {
+				"description": "Changes the amount of eitr drain by %",
+				"defaultValue": "0",
+				"defaultType": "float",
+				"modifier": "true"
+			}
+		}
+	},
+	"HealthUsage": {
+		"description": "",
+		"icon": "fa fa-tools",
+		"description_website": "Change the health usage of in-game weapons related actions.",
+		"entries": {
+			"enabled": {
+				"description": "Change false to true to enable this section",
+				"defaultValue": "false",
+				"defaultType": "bool"
+			},
+			"bloodMagic": {
+				"description": "Changes the amount of health drain by %",
+				"defaultValue": "0",
+				"defaultType": "float",
+				"modifier": "true"
+			}
+		}
+	},
 	"StructuralIntegrity": {
 		"description": "",
 		"icon": "fas fa-construction",
